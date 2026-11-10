@@ -48,7 +48,7 @@ const music=$('#music');const voice=$('#voice');
 let musicLevel=.35, hasVoice=false, voiceKind='none', objectUrl=null;
 music.volume=musicLevel;
 function updateSoundUI(){const playing=!music.paused;$('#music-toggle').textContent=playing?'Ⅱ':'▶';$('#music-toggle').setAttribute('aria-label',playing?'Pause background music':'Play background music');$('#music-toggle').setAttribute('aria-pressed',String(playing));$('#header-sound').setAttribute('aria-pressed',String(playing));$('#header-sound').lastElementChild.textContent=playing?'Sound on':'Sound off';$('.audio-dock').classList.toggle('playing',playing);}
-function duckMusic(){music.volume=musicLevel*(hasVoice&&!voice.paused?.32:1);}
+function duckMusic(){music.volume=musicLevel*(hasVoice && !voice.paused ? .32 : 1);}
 async function toggleMusic(){if(!music.paused)music.pause();else try{await music.play();}catch{toast('The soundtrack could not play. Try again in a moment.');}}
 $('#music-toggle').addEventListener('click',toggleMusic);$('#header-sound').addEventListener('click',toggleMusic);
 music.addEventListener('play',updateSoundUI);music.addEventListener('pause',updateSoundUI);music.addEventListener('error',()=>toast('The soundtrack could not load. Please refresh the page.'));
