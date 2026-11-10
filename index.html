@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#060a10">
+ <title>STEVE — The Last Builder | The Worldheart Chronicles</title>
+ <meta name="description" content="One builder. Six chapters. A world reborn. Discover STEVE's original cinematic chronicle, explore the legend, and add your own narration.">
+ <meta property="og:title" content="STEVE — The Last Builder"><meta property="og:description" content="The hero who rebuilt a broken world. An original cinematic fan chronicle."><meta property="og:image" content="/images/scene-05-final-dimension.webp"><meta property="og:type" content="website">
+ <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+ <link rel="preload" as="image" href="/images/avatar-01-legendary.webp">
+ <link rel="stylesheet" href="/styles.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+ <a class="skip-link" href="#chronicle">Skip to the chronicle</a>
+ <div class="reading-progress" aria-hidden="true"></div>
+ <header class="nav-wrap"><nav class="nav container" aria-label="Main navigation">
+  <a href="#" class="brand" aria-label="The Worldheart Chronicles home"><span class="rune" aria-hidden="true">◇</span><span>WORLDHEART<span class="brand-small">THE CHRONICLES</span></span></a>
+  <div class="nav-links"><a href="#chronicle">The chronicle</a><a href="#legend">The legend</a><a href="#narration">Your narration</a></div>
+  <button class="sound-toggle" id="header-sound" aria-pressed="false"><span class="sound-icon" aria-hidden="true">♫</span><span>Sound off</span></button>
+ </nav></header>
+
+ <main>
+  <section class="hero" aria-labelledby="hero-title">
+   <div class="hero-art" aria-hidden="true"><img src="/images/avatar-01-legendary.webp" alt="" fetchpriority="high" width="1254" height="1254"></div>
+   <div class="hero-shade" aria-hidden="true"></div><canvas id="aura" aria-hidden="true"></canvas>
+   <div class="hero-inner container">
+    <div class="eyebrow"><span class="live-dot"></span> AN ORIGINAL CINEMATIC CHRONICLE <span class="edition">VOL. 01 / 2025</span></div>
+    <div class="hero-copy"><p class="hero-overline">WHEN EVERYTHING ENDS,<br>SOMEONE MUST BEGIN.</p><h1 id="hero-title">STEVE<span>THE LAST<br><em>BUILDER.</em></span></h1>
+    <p class="hero-description">The hero who rebuilt a broken world.<br>A story of lost power, impossible courage,<br>and the hands that chose to create.</p>
+    <div class="hero-actions"><button class="button primary" id="watch-film"><span aria-hidden="true">▶</span> Experience the story <span class="button-time">01:56</span></button><a class="text-link" href="#chronicle">Explore the chronicle <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <div class="hero-bottom"><span class="coordinate">X: 012 &nbsp; Y: 064 &nbsp; Z: 025</span><a href="#chronicle" class="scroll-cue">SCROLL TO DISCOVER <span>↓</span></a><span class="hero-caption"><span class="live-dot"></span> THE WORLDHEART IS AWAKE</span></div>
+   </div>
+   <div class="hero-side-label" aria-hidden="true">OBSIDIAN / DIAMOND / UNBROKEN</div>
+  </section>
+
+  <section class="prologue container reveal" aria-label="Prologue"><div class="section-number">00 / PROLOGUE</div><div><h2>A world in ruins.<br><span>One reason to build.</span></h2><p>He woke with no map. No home. No memory of the fall. But his hands remembered. Where others saw the end of a world, STEVE saw the first block of a new one.</p></div><div class="worldheart" aria-hidden="true"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div><span>THE WORLDHEART</span></div></section>
+
+  <section class="chronicle-section" id="chronicle" aria-labelledby="chronicle-heading">
+   <div class="container"><div class="section-heading reveal"><div><p class="eyebrow muted">01 / THE JOURNEY</p><h2 id="chronicle-heading">Six moments.<br><em>One legend.</em></h2></div><p>From the first breath to a world reborn.<br>Follow the light through every chapter.</p><span class="chapter-count">01 <span>/ 06</span></span></div>
+   <div class="chapter-layout reveal">
+    <div class="chapter-nav" role="tablist" aria-label="Story chapters" aria-orientation="vertical">
+     <button role="tab" id="tab-0" aria-selected="true" aria-controls="chapter-panel" data-chapter="0"><span class="chapter-index">01</span><span><small>APRIL 12, 2025</small>The Awakening</span><span class="chapter-arrow">↗</span></button>
+     <button role="tab" id="tab-1" aria-selected="false" aria-controls="chapter-panel" data-chapter="1" tabindex="-1"><span class="chapter-index">02</span><span><small>APRIL 13, 2025</small>The First Night</span><span class="chapter-arrow">↗</span></button>
+     <button role="tab" id="tab-2" aria-selected="false" aria-controls="chapter-panel" data-chapter="2" tabindex="-1"><span class="chapter-index">03</span><span><small>APRIL 20, 2025</small>The Forgotten Power</span><span class="chapter-arrow">↗</span></button>
+     <button role="tab" id="tab-3" aria-selected="false" aria-controls="chapter-panel" data-chapter="3" tabindex="-1"><span class="chapter-index">04</span><span><small>MAY 2, 2025</small>Into the Nether</span><span class="chapter-arrow">↗</span></button>
+     <button role="tab" id="tab-4" aria-selected="false" aria-controls="chapter-panel" data-chapter="4" tabindex="-1"><span class="chapter-index">05</span><span><small>MAY 18, 2025</small>The Final Dimension</span><span class="chapter-arrow">↗</span></button>
+     <button role="tab" id="tab-5" aria-selected="false" aria-controls="chapter-panel" data-chapter="5" tabindex="-1"><span class="chapter-index">06</span><span><small>MAY 19, 2025</small>The Last Builder</span><span class="chapter-arrow">↗</span></button>
+    </div>
+    <article class="chapter-panel" id="chapter-panel" role="tabpanel" aria-labelledby="tab-0" tabindex="0"><div class="chapter-image-wrap"><img id="chapter-image" src="/images/scene-01-awakening.webp" alt="STEVE wakes among misty forest ruins at dawn" width="1672" height="941" loading="lazy"><span class="image-tag" id="chapter-location">THE OVERWORLD / DAWN</span><button class="expand-image" id="expand-scene" aria-label="Expand chapter illustration">⤢</button></div><div class="chapter-story"><p class="eyebrow" id="chapter-date">APRIL 12, 2025</p><h3 id="chapter-title">The Awakening</h3><p id="chapter-description">STEVE wakes in a ruined forest. Beyond the trees, empty villages wait in the mist. With no memory of the fall, he makes his first choice: stay, and build.</p><div class="chapter-bottom"><span id="chapter-motif">EVERY LEGEND BEGINS WITH A CHOICE.</span><div><button id="prev-chapter" aria-label="Previous chapter">←</button><button id="next-chapter" aria-label="Next chapter">→</button></div></div></div></article>
+   </div></div>
+  </section>
+
+  <section class="legend-section container" id="legend" aria-labelledby="legend-heading"><div class="section-heading reveal"><div><p class="eyebrow muted">02 / THE MAN BEHIND THE LEGEND</p><h2 id="legend-heading">Forged in darkness.<br><em>Defined by light.</em></h2></div><p>One builder. Five faces of a legend.<br>Select a portrait to look closer.</p></div>
+   <div class="avatar-collection reveal">
+    <button class="avatar-card" data-avatar="0"><img src="/images/avatar-01-legendary.webp" alt="Legendary STEVE in obsidian and diamond armor" width="1254" height="1254" loading="lazy"><span class="avatar-top">I / THE ORIGIN <span>↗</span></span><span class="avatar-label"><small>THE LEGENDARY</small>STEVE</span></button>
+    <button class="avatar-card" data-avatar="1"><img src="/images/avatar-02-mysterious.webp" alt="Mysterious STEVE with luminous cyan eyes in a dark forest" width="1254" height="1254" loading="lazy"><span class="avatar-top">II / THE SHADOW <span>↗</span></span><span class="avatar-label"><small>THE WATCHER</small>STEVE</span></button>
+    <button class="avatar-card" data-avatar="2"><img src="/images/avatar-03-electric.webp" alt="STEVE surrounded by electric blue energy" width="1254" height="1254" loading="lazy"><span class="avatar-top">III / THE POWER <span>↗</span></span><span class="avatar-label"><small>THE AWAKENED</small>STEVE</span></button>
+    <button class="avatar-card" data-avatar="3"><img src="/images/avatar-04-battle.webp" alt="Battle-ready STEVE wielding his glowing obsidian sword" width="1254" height="1254" loading="lazy"><span class="avatar-top">IV / THE BATTLE <span>↗</span></span><span class="avatar-label"><small>THE PROTECTOR</small>STEVE</span></button>
+    <button class="avatar-card" data-avatar="4"><img src="/images/avatar-05-heroic.webp" alt="Heroic STEVE with a luminous cape at sunrise" width="1254" height="1254" loading="lazy"><span class="avatar-top">V / THE LEGACY <span>↗</span></span><span class="avatar-label"><small>THE LAST BUILDER</small>STEVE</span></button>
+   </div><div class="dossier reveal"><p>Quiet. Patient. Unbreakable.<br><strong>His true power was always kindness.</strong></p><dl><div><dt>ARMOR</dt><dd>Obsidian & diamond</dd></div><div><dt>ABILITY</dt><dd>Worldheart creation</dd></div><div><dt>PURPOSE</dt><dd>A home for everyone</dd></div></dl></div>
+  </section>
+
+  <section class="legacy-section reveal" aria-labelledby="legacy-heading"><img src="/images/scene-06-last-builder.webp" alt="A thriving village, forest and river restored by STEVE" width="1672" height="941" loading="lazy"><div class="legacy-shade"></div><div class="container legacy-copy"><p class="eyebrow">03 / A WORLD REBORN</p><h2 id="legacy-heading">He did not build<br>a kingdom.<br><em>He built a future.</em></h2><p>Forests grew. Rivers flowed. Families came home.<br>His greatest achievement was a world restored.<br>His legacy was a new generation of builders.</p><span class="legacy-date">MAY 19, 2025 — THE LAST BUILDER</span></div></section>
+
+  <section class="narration-section container" id="narration" aria-labelledby="narration-heading"><div class="section-heading reveal"><div><p class="eyebrow muted">04 / MAKE THE STORY YOURS</p><h2 id="narration-heading">The legend.<br><em>Your voice.</em></h2></div><p>Every world needs a storyteller.<br>Step into the narration booth.</p></div>
+   <div class="studio-layout reveal"><div class="voice-booth"><div class="booth-heading"><span class="record-dot"></span>NARRATION BOOTH<span>01:56 EXPERIENCE</span></div><div class="waveform" aria-hidden="true"></div><h3>Give STEVE a voice.</h3><p>Add your recording, then play the cinematic story with your voice and the original score.</p><label class="upload-zone" id="drop-zone"><span class="upload-symbol" aria-hidden="true">↑</span><strong id="voice-file-label">Choose your narration</strong><span>or drop an audio file here</span><small>MP3, WAV, M4A, OGG or WebM · up to 50 MB</small><input type="file" id="voice-file" accept="audio/*,.mp3,.wav,.m4a,.ogg,.webm" aria-label="Choose an audio file for narration"></label><p id="voice-status" class="voice-status" role="status">Your recording stays in this browser. Only you can hear it.</p><audio id="voice" controls preload="metadata" hidden></audio><div class="voice-actions"><button id="remove-voice" class="text-link" hidden>Remove recording</button><a class="text-link" href="/narration-script.txt" download>Download the script ↗</a></div><button class="button primary full" id="preview-narration"><span aria-hidden="true">▶</span> Play the cinematic story</button><details class="publish-note"><summary>Want everyone to hear your narration?</summary><p>The upload above is a private preview. To publish your voice, add your MP3 as <code>public/audio/narration.mp3</code> in the project and push to GitHub. The site will load it automatically after deployment.</p></details></div>
+   <div class="script-panel"><div class="script-heading"><span>THE DOCUMENTARY SCRIPT</span><span>~250 WORDS / 110–120 SEC</span></div><div class="script-scroll" tabindex="0" aria-label="Narration script"><p class="script-direction">[Quiet. A low pulse.]</p><p>When the world fell silent, one builder opened his eyes.<br>His name was STEVE.<br>He had no map. No home. No memory of the fall.<br>But his hands still knew how to build.</p><h4>April twelfth, twenty twenty-five.</h4><p>The Awakening. STEVE woke in a broken forest. Beyond the trees, empty villages waited in the mist. He chose to stay. He chose to help.</p><h4>April thirteenth, twenty twenty-five.</h4><p>The First Night. Monsters came out of the dark. STEVE raised a shelter, block by block. By sunrise, the last survivors had a place to rest.</p><h4>April twentieth, twenty twenty-five.</h4><p>The Forgotten Power. Deep in an ancient cave, he found the Worldheart. Its blue light revealed a lost gift. He could bring broken stone together again. But the heart needed its missing key.</p><h4>May second, twenty twenty-five.</h4><p>Into the Nether. STEVE crossed a gate of fire. Through ash and danger, he found the Ember Key. His armor burned. His hope held strong.</p><h4>May eighteenth, twenty twenty-five.</h4><p>The Final Dimension. Above the dark towers, the Ender Dragon waited. STEVE raised his sword. One final strike broke the shadow's hold. The power to rebuild was free.</p><p class="script-direction">[Music opens. Slow down.]</p><h4>May nineteenth, twenty twenty-five.</h4><p>The Last Builder. STEVE restored the Worldheart. Forests grew. Rivers flowed. Families came home. Then he taught them what his hands remembered.</p><p>He was the last builder of the old world.<br>He would not be the last of the new one.</p><p class="script-ending">A world is never lost while someone is willing to build.</p></div></div></div>
+  </section>
+
+  <section class="closing container reveal"><span class="rune" aria-hidden="true">◇</span><blockquote>“A world is never lost<br>while someone is<br><em>willing to build.</em>”</blockquote><p>STEVE — THE LAST BUILDER</p><a class="text-link" href="/STEVE-poster-9x16.svg" download>Keep the legend · Download the poster <span>↗</span></a></section>
+ </main>
+ <footer class="footer container"><a class="brand" href="#"><span class="rune">◇</span><span>WORLDHEART<span class="brand-small">THE CHRONICLES</span></span></a><p>An original fan-made fictional chronicle.<br>Not affiliated with Mojang or Microsoft.</p><a class="text-link" href="#">Back to the light ↑</a></footer>
+
+ <aside class="audio-dock" aria-label="Background soundtrack"><button id="music-toggle" aria-label="Play background music" aria-pressed="false">▶</button><div class="track-info"><span>WORLDHEART</span><small>Original instrumental score</small></div><div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i></div><label class="volume-control"><span class="sr-only">Music volume</span><input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="Music volume"></label></aside>
+ <audio id="music" src="/audio/worldheart-original.mp3" preload="none" loop></audio>
+ <dialog id="art-dialog" class="art-dialog"><button class="dialog-close" aria-label="Close image">✕</button><img id="dialog-image" alt=""><div class="dialog-caption"><p class="eyebrow" id="dialog-kicker"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><a class="text-link" id="dialog-download" download>Download artwork ↗</a></div></dialog>
+ <dialog id="film-dialog" class="film-dialog" aria-labelledby="film-title"><img id="film-image" alt=""><div class="film-shade"></div><button class="dialog-close" aria-label="Close cinematic story">✕</button><div class="film-top"><span>THE WORLDHEART CHRONICLES</span><span id="film-time">00:00 / 01:56</span></div><div class="film-copy"><p class="eyebrow" id="film-date"></p><h2 id="film-title"></h2><p id="film-description"></p></div><div class="film-controls"><button id="film-play" aria-label="Pause cinematic story">Ⅱ</button><input type="range" id="film-seek" min="0" max="116" value="0" step="0.1" aria-label="Cinematic story position"><button id="film-fullscreen" aria-label="Toggle fullscreen">⤢</button><span id="film-voice-label">INSTRUMENTAL · ADD YOUR VOICE BELOW</span></div></dialog>
+ <div class="toast" id="toast" role="status"></div>
+</body>
+</html>

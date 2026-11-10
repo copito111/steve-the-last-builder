@@ -1,0 +1,14 @@
+{
+  "name": "steve-the-last-builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An immersive, original fan-made Minecraft character chronicle.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist",
+    "check": "node --check app.js && node scripts/check.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
