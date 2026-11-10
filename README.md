@@ -1,10 +1,10 @@
 # STEVE — THE LAST BUILDER
 
-## Obsidian narration edition
+## Monster narration edition — recorded retakes
 
-The published site now includes the creator's processed narration: a dominant unshifted voice, a quieter low-pitched layer, metallic modulation, noise reduction and loudness control. The supplied speech is retained; no replacement speech or AI pronunciation correction is synthesized.
+The published site includes ten recorded phrase replacements selected from eleven supplied takes. Two takes read the same April 13 date; one was selected. The Monster edition combines a dominant lowered, formant-shifted voice with a dry clarity layer and a quieter low growl. Noise reduction, level matching, short splice fades, compression and loudness control keep the edit consistent. No synthetic replacement speech or voice cloning is used.
 
-The six chapter entries, English caption cues and film duration are defined in `public/narration-data.js`. The media clock of the narration drives the cinematic scenes, including pause, resume and seeking. Each moment also has a downloadable MP3 under `public/audio/moments/`.
+The six chapter entries, English caption cues and film duration are defined in `public/narration-data.js`. The media clock of the narration drives the cinematic scenes, including pause, resume and seeking. The current six downloadable chapter recordings are under `public/audio/moments-monster-v2/`. Earlier editions are retained as existing assets.
 
 The published narration loads by default. Visitors can still try private audio uploads and return to the published voice with **Use published voice**. Captions are disabled for private recordings because those recordings do not necessarily match the published script.
 

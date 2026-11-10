@@ -74,7 +74,7 @@ async function loadPublishedVoice(){
  if($('#film-dialog').open)$('#film-dialog').close();
  voice.pause();if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=null;
  voice.src=narration.voiceUrl;voice.load();
- try{await voiceMetadata();hasVoice=true;voiceKind='published';voice.hidden=false;$('#use-published-voice').hidden=true;$('#remove-voice').hidden=true;$('#voice-file-label').textContent='Preview your own narration';$('#voice-status').textContent='The creator’s Obsidian edition is ready. Your own uploads stay private in this browser.';try{localStorage.setItem('worldheart-voice-choice','published');}catch{}refreshDuration();}
+ try{await voiceMetadata();hasVoice=true;voiceKind='published';voice.hidden=false;$('#use-published-voice').hidden=true;$('#remove-voice').hidden=true;$('#voice-file-label').textContent='Preview your own narration';$('#voice-status').textContent='The creator’s Monster edition is ready. Your own uploads stay private in this browser.';try{localStorage.setItem('worldheart-voice-choice','published');}catch{}refreshDuration();}
  catch{hasVoice=false;voiceKind='none';$('#voice-status').textContent='The narration could not load. Refresh the page or try your own audio file.';toast('Narration could not load. The instrumental remains available.');}
 }
 async function setVoice(file,{persist=true}={}) {
@@ -131,7 +131,7 @@ function pauseFilm(){filmPosition=currentFilmTime();filmPlaying=false;++playGene
 function finishFilm(){pauseFilm();filmPosition=duration;$('#film-play').textContent='↻';$('#film-play').setAttribute('aria-label','Replay cinematic story');$('#film-caption').textContent='A world is never lost while someone is willing to build.';}
 async function openFilm(startChapter=null){
  if(film.open)return;await voiceReady;refreshDuration();beforeFilm={playing:!music.paused,time:music.currentTime};voice.pause();filmPosition=startChapter===null?0:chapterStart(startChapter);filmChapter=-1;film.showModal();
- $('#film-voice-label').textContent=hasVoice?(voiceKind==='private'?'YOUR PRIVATE VOICE PREVIEW':'CREATOR’S VOICE · OBSIDIAN EDITION'):'ORIGINAL INSTRUMENTAL';$('#film-captions').disabled=voiceKind!=='published';$('#film-captions').title=voiceKind==='published'?'English captions':'Captions match the published narration';renderFilm();await playFilm();
+ $('#film-voice-label').textContent=hasVoice?(voiceKind==='private'?'YOUR PRIVATE VOICE PREVIEW':'CREATOR’S VOICE · MONSTER EDITION'):'ORIGINAL INSTRUMENTAL';$('#film-captions').disabled=voiceKind!=='published';$('#film-captions').title=voiceKind==='published'?'English captions':'Captions match the published narration';renderFilm();await playFilm();
 }
 $('#watch-film').addEventListener('click',()=>openFilm());$('#preview-narration').addEventListener('click',()=>openFilm());$('#listen-chapter').addEventListener('click',()=>openFilm(chapter));$('#film-play').addEventListener('click',()=>filmPlaying?pauseFilm():playFilm());
 function seekFilm(time){const wasPlaying=filmPlaying;pauseFilm();filmPosition=Math.max(0,Math.min(duration,time));if(hasVoice)voice.currentTime=filmPosition;syncMusic(filmPosition);renderFilm();if(filmPosition>=duration-.03){finishFilm();return;}if(wasPlaying)playFilm();}
