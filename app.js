@@ -117,10 +117,14 @@ async function playFilm(){
  const generation=++playGeneration;if(filmPosition>=duration-.03)filmPosition=0;
  $('#film-play').disabled=true;$('#film-play').setAttribute('aria-label','Starting cinematic story');
  try{
-  if(hasVoice){voice.currentTime=Math.min(filmPosition,duration);await voice.play();}
+  if(hasVoice)voice.currentTime=Math.min(filmPosition,duration);
+  syncMusic(filmPosition);
+  // Start both elements inside the same interaction, including on mobile Safari.
+  music.play().catch(error=>{if(generation===playGeneration&&film.open&&error.name!=='AbortError')toast('The score could not play. Your narration is still available.');});
+  if(hasVoice)await voice.play();
   if(generation!==playGeneration||!film.open)return;
-  filmStart=performance.now();filmPlaying=true;syncMusic(filmPosition);music.play().catch(()=>toast('The score could not play. Your narration is still available.'));duckMusic();$('#film-play').textContent='Ⅱ';$('#film-play').setAttribute('aria-label','Pause cinematic story');cancelAnimationFrame(filmFrame);renderFilm();
- }catch{filmPlaying=false;toast('The narration could not play. Please try again.');$('#film-play').textContent='▶';$('#film-play').setAttribute('aria-label','Resume cinematic story');}
+  filmStart=performance.now();filmPlaying=true;duckMusic();$('#film-play').textContent='Ⅱ';$('#film-play').setAttribute('aria-label','Pause cinematic story');cancelAnimationFrame(filmFrame);renderFilm();
+ }catch(error){if(generation!==playGeneration||error.name==='AbortError')return;filmPlaying=false;music.pause();toast('The narration could not play. Please try again.');$('#film-play').textContent='▶';$('#film-play').setAttribute('aria-label','Resume cinematic story');}
  finally{if(generation===playGeneration)$('#film-play').disabled=false;}
 }
 function pauseFilm(){filmPosition=currentFilmTime();filmPlaying=false;++playGeneration;cancelAnimationFrame(filmFrame);music.pause();voice.pause();$('#film-play').disabled=false;$('#film-play').textContent='▶';$('#film-play').setAttribute('aria-label','Resume cinematic story');}
